@@ -13,7 +13,10 @@ contract GenesisNFT is ERC721 {
     constructor() ERC721("GenesisNFT", "GNFT") {}
 
     function mintGenesisNFT() external returns (uint256) {
-        require(!_hasMinted[msg.sender], "You have already minted a token");
+        require(
+            !_hasMinted[msg.sender],
+            "GenesisNFT::mintGenesisNFT: You have already minted a token"
+        );
 
         _tokenIds.increment();
         uint256 tokenId = _tokenIds.current();
