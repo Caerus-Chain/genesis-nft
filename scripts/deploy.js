@@ -17,3 +17,4 @@ main()
     console.error(error);
     process.exit(1);
   });
+// GenesisNFT deployed to: 0xdB57E2c22989116Cec1Ad7D59D2edE8123124A35
