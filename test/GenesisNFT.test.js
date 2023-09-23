@@ -23,7 +23,7 @@ describe("GenesisNFT contract", function () {
 
       await expect(
         genesisNFT.connect(user).mintGenesisNFT()
-      ).to.be.revertedWith("You have already minted a token");
+      ).to.be.revertedWith("GenesisNFT::mintGenesisNFT: You have already minted a token");
     });
   });
 });
